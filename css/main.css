@@ -1,0 +1,324 @@
+@import url(https://fonts.googleapis.com/css?family=Allan);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+
+.toptrans{
+  background-color: rgb(255, 255, 255);
+  min-width: 200%;
+  height: 50rem;
+  z-index: 1;
+  left: 15rem;
+  position: relative;
+  top: -20.7rem;
+  transform: rotate3d(4, 1, 1, 45deg)
+}
+.bottrans{
+  background-color: rgb(255, 255, 255);
+  min-width: 200%;
+  height: 50rem;
+  z-index: 1;
+  margin-left: -200rem;
+  bottom: -20.7rem;
+  transform: rotate3d(4, 1, 1, 45deg);
+  position: relative;
+}
+.top{
+    width: 110%;
+    position: absolute ;
+    background-color: rgb(96, 8, 184);
+    height: 2rem;
+    margin-left: -1rem;
+    top: 0;
+    z-index: 10;
+}
+.bottom {
+    background-color: rgb(96, 8, 184);
+    width: 110%;
+    position: fixed;
+    height: 2rem;
+    margin-left: -1rem;
+    bottom: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.mainpage{
+    display: flex;
+    padding: 6rem;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.wrapper{
+  min-width: 25rem;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 10px 20px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  position: absolute;
+  margin: 7rem 35rem 10rem 35rem;
+}
+p{
+  font-size: 1rem;
+}
+.regis{
+  position: absolute;
+}
+.center-img{
+  max-width: 7rem;
+  max-height: 5rem;
+  margin: 1rem 10rem 1rem 10rem;
+}
+.wrapper .input-data{
+  height: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.wrapper .input-data input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: .9rem;
+  border-bottom: 2px solid silver;
+}
+/* input:focus{
+    box-shadow: 0 0 15px  #a841d0,
+                0 0 25px  #a841d0,
+                0 0 35px   #a841d0;
+  }
+  input::placeholder{
+    color: #a6a6a6;
+  } */
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #a841d0;
+}
+.fa-eye{
+  float: right;
+  padding: 0.1rem;
+}
+.fa-eye-slash{
+  padding: 0.1rem;
+  float: right;
+  display: none !important;
+}
+.show-hide{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wrapper .input-data label{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.input-data .underline{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #a841d0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+  transform: scaleX(1);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.reasons{
+  color: #B11010;
+  font-size: 14px;
+}
+
+button{
+    background: rgb(153, 147, 147);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    transition-delay: 0.4s ease;;
+    min-width: 100%;
+}
+.forgot-password{
+  font-size: 0.8rem;
+}
+.forgot-password:hover{
+    color: rgb(177, 13, 241);
+}
+button:hover{
+    background: purple;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+/* General styles */
+
+.general_class{
+  font: 400 20px 'Droid Sans', sans-serif;
+  line-height: 1.5em;
+	  background-color: #fff;
+	  color: #c0c5ce;
+}
+
+/* Style for header */
+
+header{
+	  position: relative;
+	  background-color: rgb(96, 8, 184);
+    z-index: 12;
+    
+
+}
+header ul.nav{
+  	overflow: hidden;
+}
+header ul.nav li{
+  	position: relative;
+	  float: left;
+	  width: 20%;
+}
+header ul.nav li a{
+  	height: 50px;
+    opacity: 0;
+    font: 400 1.15em 'Allan', serif;
+	  line-height: 50px;
+	  color: #ffffff;
+    text-decoration: none;
+	  text-align: center;
+  	cursor: default;
+	  transition: all 0.25s ease;
+
+}
+
+@media screen and (max-width: 600px){
+  	header ul.nav li{
+		    float: none;
+    		width: 100%;
+  	}
+	  header ul.nav li a{
+		    height: 0;
+
+  	}
+}
+
+/* Style for header with active class name */
+
+header.active ul.nav li a{
+	  height: 5rem;
+  	opacity: 1;
+
+	  line-height: 5rem;
+	  cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+  	header.active ul.nav li a{
+
+		    height: 60px;
+		    line-height: 60px;
+    border-bottom: 1px solid #222b2f;
+	  }
+}
+
+/* Style for the plus button */
+
+button.toggle-nav{
+  	position: absolute;
+    top: 1.6rem;
+  	width: 2rem !important;
+	  height: 2.2rem !important;
+  	background-color:  #a650c8;
+  	color: #fff;
+  	border-bottom-left-radius: 10px;
+	  border-bottom-right-radius: 10px;
+	  transition: all 0.25s ease;
+}
+button.toggle-nav:hover{
+  	height: 50px;
+}
+button.toggle-nav span{
+	  display: block;
+  	transform: rotate(90deg);
+  	transition: all 0.25s ease;
+}
+
+/* Style for the plus button when header has active classe name */
+
+header.active button.toggle-nav{
+  	top: 4.2rem;
+    background-color: #8d25dd;
+}
+header.active button.toggle-nav span{
+	  transform: rotate(270deg);
+}
+
+@media screen and (max-width: 600px){
+	  button.toggle-nav{
+		    top: 0;
+		    left: 15px;
+	  }
+  	header.active button.toggle-nav{
+    		top: 305px;
+	  }
+}
+
+/* Other styles */
+
+.loud{
+	  text-transform: uppercase;
+}
